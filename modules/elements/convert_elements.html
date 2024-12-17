@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ConvertElements &#8212; PySAAL 0.1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="../../_static/basic.css?v=686e5160" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css?v=27fed22d" />
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="canonical" href="https://know-space.github.io/pysaal/modules/elements/convert_elements.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="EquinoctialElements" href="equinoctial_elements.html" />
+    <link rel="prev" title="ClassicalElements" href="classical_elements.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="convertelements">
+<span id="convert-elements"></span><h1>ConvertElements<a class="headerlink" href="#convertelements" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py class" id="module-pysaal.elements._convert_elements">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ConvertElements</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to convert between different types of orbital elements</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.cartesian">
+<span class="sig-name descname"><span class="pre">cartesian</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.cartesian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to cartesian elements</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetCartesian" title="pysaal.elements._convert_elements._GetCartesian"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetCartesian</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.classical">
+<span class="sig-name descname"><span class="pre">classical</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.classical" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to classical elements</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetClassical" title="pysaal.elements._convert_elements._GetClassical"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetClassical</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.equinoctial">
+<span class="sig-name descname"><span class="pre">equinoctial</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.equinoctial" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to equinoctial elements</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetEquinoctial" title="pysaal.elements._convert_elements._GetEquinoctial"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetEquinoctial</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.keplerian">
+<span class="sig-name descname"><span class="pre">keplerian</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.keplerian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to keplerian elements</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetKeplerian" title="pysaal.elements._convert_elements._GetKeplerian"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetKeplerian</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.mean">
+<span class="sig-name descname"><span class="pre">mean</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.mean" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to mean elements</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetMean" title="pysaal.elements._convert_elements._GetMean"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetMean</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.mean_motion">
+<span class="sig-name descname"><span class="pre">mean_motion</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.mean_motion" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to mean motion</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetMeanMotion" title="pysaal.elements._convert_elements._GetMeanMotion"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetMeanMotion</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements.ConvertElements.tle">
+<span class="sig-name descname"><span class="pre">tle</span></span><a class="headerlink" href="#pysaal.elements._convert_elements.ConvertElements.tle" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to TLE</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetTLE" title="pysaal.elements._convert_elements._GetTLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetTLE</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetBrouwer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetBrouwer</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetBrouwer" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the Brouwer mean motion of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetBrouwer.from_kozai">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_kozai</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetBrouwer.from_kozai" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Kozai mean motion to Brouwer mean motion</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The eccentricity of the orbit</p></li>
+<li><p><strong>i</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The inclination of the orbit in <span class="math notranslate nohighlight">\(deg\)</span></p></li>
+<li><p><strong>n</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The Kozai mean motion of the orbit in <span class="math notranslate nohighlight">\(\frac{rev}{day}\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The Brouwer mean motion of the orbit in <span class="math notranslate nohighlight">\(\frac{rev}{day}\)</span></p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span>
+
+<span class="n">brouwer_n</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">mean_motion</span><span class="o">.</span><span class="n">brouwer</span><span class="o">.</span><span class="n">from_kozai</span><span class="p">(</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetCartesian">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetCartesian</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetCartesian" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the cartesian elements of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetCartesian.from_equinoctial">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_equinoctial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eqnx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetCartesian.from_equinoctial" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Equinoctial elements to Cartesian elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>eqnx</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="equinoctial_elements.html#pysaal.elements._equinoctial_elements.EquinoctialElements" title="pysaal.elements._equinoctial_elements.EquinoctialElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">EquinoctialElements</span></code></a></span>) – The Equinoctial elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="cartesian_elements.html#pysaal.elements._cartesian_elements.CartesianElements" title="pysaal.elements._cartesian_elements.CartesianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">CartesianElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">EquinoctialElements</span>
+
+<span class="n">eqnx</span> <span class="o">=</span> <span class="n">EquinoctialElements</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">7.660444431189783e-05</span><span class="p">,</span>
+    <span class="mf">6.42787609686539e-05</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.001253574911285049</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.0034441687623505044</span><span class="p">,</span>
+    <span class="mf">542.0000000000001</span><span class="p">,</span>
+    <span class="mf">1.0027444112324284</span>
+<span class="p">)</span>
+<span class="n">cart</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">cartesian</span><span class="o">.</span><span class="n">from_equinoctial</span><span class="p">(</span><span class="n">eqnx</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetCartesian.from_keplerian">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_keplerian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetCartesian.from_keplerian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Keplerian elements to Cartesian elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>kep</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="keplerian_elements.html#pysaal.elements._keplerian_elements.KeplerianElements" title="pysaal.elements._keplerian_elements.KeplerianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeplerianElements</span></code></a></span>) – The Keplerian elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="cartesian_elements.html#pysaal.elements._cartesian_elements.CartesianElements" title="pysaal.elements._cartesian_elements.CartesianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">CartesianElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">KeplerianElements</span>
+
+<span class="n">kep</span> <span class="o">=</span> <span class="n">KeplerianElements</span><span class="p">(</span><span class="mi">42164</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">cart</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">cartesian</span><span class="o">.</span><span class="n">from_keplerian</span><span class="p">(</span><span class="n">kep</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetClassical">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetClassical</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetClassical" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the classical elements of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetClassical.from_equinoctial">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_equinoctial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eqnx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetClassical.from_equinoctial" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Equinoctial elements to Classical elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>eqnx</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="equinoctial_elements.html#pysaal.elements._equinoctial_elements.EquinoctialElements" title="pysaal.elements._equinoctial_elements.EquinoctialElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">EquinoctialElements</span></code></a></span>) – The Equinoctial elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="classical_elements.html#pysaal.elements._classical_elements.ClassicalElements" title="pysaal.elements._classical_elements.ClassicalElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClassicalElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">EquinoctialElements</span>
+
+<span class="n">eqnx</span> <span class="o">=</span> <span class="n">EquinoctialElements</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">7.660444431189783e-05</span><span class="p">,</span>
+    <span class="mf">6.42787609686539e-05</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.001253574911285049</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.0034441687623505044</span><span class="p">,</span>
+    <span class="mf">542.0000000000001</span><span class="p">,</span>
+    <span class="mf">1.0027444112324284</span>
+<span class="p">)</span>
+<span class="n">cl</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">classical</span><span class="o">.</span><span class="n">from_equinoctial</span><span class="p">(</span><span class="n">eqnx</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetEquinoctial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetEquinoctial</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetEquinoctial" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the equinoctial elements of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetEquinoctial.from_cartesian">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetEquinoctial.from_cartesian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Cartesian elements to Equinoctial elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cart</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="cartesian_elements.html#pysaal.elements._cartesian_elements.CartesianElements" title="pysaal.elements._cartesian_elements.CartesianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">CartesianElements</span></code></a></span>) – The TEME cartesian elements in <span class="math notranslate nohighlight">\(km\)</span> and <span class="math notranslate nohighlight">\(\frac{km}{s}\)</span></p></li>
+<li><p><strong>mu</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The gravitational parameter of the central body in <span class="math notranslate nohighlight">\(\frac{km^3}{s^2}\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="equinoctial_elements.html#pysaal.elements._equinoctial_elements.EquinoctialElements" title="pysaal.elements._equinoctial_elements.EquinoctialElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">EquinoctialElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">CartesianElements</span>
+<span class="kn">from</span> <span class="nn">pysaal.bodies</span> <span class="kn">import</span> <span class="n">Earth</span>
+
+<span class="n">cart</span> <span class="o">=</span> <span class="n">CartesianElements</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">42134.866555365596</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">1477.3611216130757</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">95.4631435846219</span><span class="p">,</span>
+    <span class="mf">0.10749110300482166</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">3.072941987275631</span><span class="p">,</span>
+    <span class="mf">0.021437245884576635</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">eqnx</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">equinoctial</span><span class="o">.</span><span class="n">from_cartesian</span><span class="p">(</span><span class="n">cart</span><span class="p">,</span> <span class="n">Earth</span><span class="o">.</span><span class="n">get_mu</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetEquinoctial.from_classical">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_classical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cl</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetEquinoctial.from_classical" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Classical elements to Equinoctial elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cl</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="classical_elements.html#pysaal.elements._classical_elements.ClassicalElements" title="pysaal.elements._classical_elements.ClassicalElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ClassicalElements</span></code></a></span>) – The Classical elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="equinoctial_elements.html#pysaal.elements._equinoctial_elements.EquinoctialElements" title="pysaal.elements._equinoctial_elements.EquinoctialElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">EquinoctialElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">ClassicalElements</span>
+
+<span class="n">cl</span> <span class="o">=</span> <span class="n">ClassicalElements</span><span class="p">(</span>
+    <span class="mf">1.0027444112324284</span><span class="p">,</span>
+    <span class="mf">0.0001</span><span class="p">,</span>
+    <span class="mf">0.42</span><span class="p">,</span>
+    <span class="mi">42</span><span class="p">,</span>
+    <span class="mi">200</span><span class="p">,</span>
+    <span class="mi">300</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">eqnx</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">equinoctial</span><span class="o">.</span><span class="n">from_classical</span><span class="p">(</span><span class="n">cl</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetEquinoctial.from_keplerian">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_keplerian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetEquinoctial.from_keplerian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Keplerian elements to Equinoctial elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>kep</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="keplerian_elements.html#pysaal.elements._keplerian_elements.KeplerianElements" title="pysaal.elements._keplerian_elements.KeplerianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeplerianElements</span></code></a></span>) – The Keplerian elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="equinoctial_elements.html#pysaal.elements._equinoctial_elements.EquinoctialElements" title="pysaal.elements._equinoctial_elements.EquinoctialElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">EquinoctialElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">KeplerianElements</span>
+
+<span class="n">kep</span> <span class="o">=</span> <span class="n">KeplerianElements</span><span class="p">(</span><span class="mi">42164</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">eqnx</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">equinoctial</span><span class="o">.</span><span class="n">from_keplerian</span><span class="p">(</span><span class="n">kep</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetKeplerian">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetKeplerian</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetKeplerian" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the keplerian elements of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetKeplerian.from_cartesian">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_cartesian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetKeplerian.from_cartesian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Cartesian elements to Keplerian elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cart</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="cartesian_elements.html#pysaal.elements._cartesian_elements.CartesianElements" title="pysaal.elements._cartesian_elements.CartesianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">CartesianElements</span></code></a></span>) – The cartesian elements in <span class="math notranslate nohighlight">\(km\)</span> and <span class="math notranslate nohighlight">\(\frac{km}{s}\)</span></p></li>
+<li><p><strong>mu</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The gravitational parameter of the central body in <span class="math notranslate nohighlight">\(\frac{km^3}{s^2}\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="keplerian_elements.html#pysaal.elements._keplerian_elements.KeplerianElements" title="pysaal.elements._keplerian_elements.KeplerianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeplerianElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">CartesianElements</span>
+<span class="kn">from</span> <span class="nn">pysaal.bodies</span> <span class="kn">import</span> <span class="n">Earth</span>
+
+<span class="n">cart</span> <span class="o">=</span> <span class="n">CartesianElements</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">42134.866555365596</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">1477.3611216130757</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">95.4631435846219</span><span class="p">,</span>
+    <span class="mf">0.10749110300482166</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">3.072941987275631</span><span class="p">,</span>
+    <span class="mf">0.021437245884576635</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">kep</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">keplerian</span><span class="o">.</span><span class="n">from_cartesian</span><span class="p">(</span><span class="n">cart</span><span class="p">,</span> <span class="n">Earth</span><span class="o">.</span><span class="n">get_mu</span><span class="p">())</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetKeplerian.from_equinoctial">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_equinoctial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eqnx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetKeplerian.from_equinoctial" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Equinoctial elements to Keplerian elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>eqnx</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="equinoctial_elements.html#pysaal.elements._equinoctial_elements.EquinoctialElements" title="pysaal.elements._equinoctial_elements.EquinoctialElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">EquinoctialElements</span></code></a></span>) – The Equinoctial elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="keplerian_elements.html#pysaal.elements._keplerian_elements.KeplerianElements" title="pysaal.elements._keplerian_elements.KeplerianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeplerianElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">EquinoctialElements</span>
+
+<span class="n">eqnx</span> <span class="o">=</span> <span class="n">EquinoctialElements</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">7.660444431189783e-05</span><span class="p">,</span>
+    <span class="mf">6.42787609686539e-05</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.001253574911285049</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">0.0034441687623505044</span><span class="p">,</span>
+    <span class="mf">542.0000000000001</span><span class="p">,</span>
+    <span class="mf">1.0027444112324284</span>
+<span class="p">)</span>
+<span class="n">kep</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">keplerian</span><span class="o">.</span><span class="n">from_equinoctial</span><span class="p">(</span><span class="n">eqnx</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetKozai">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetKozai</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetKozai" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the Kozai mean motion of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetKozai.from_brouwer">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_brouwer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetKozai.from_brouwer" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Brouwer mean motion to Kozai mean motion</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>e</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The eccentricity of the orbit</p></li>
+<li><p><strong>i</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The inclination of the orbit in <span class="math notranslate nohighlight">\(deg\)</span></p></li>
+<li><p><strong>n</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The Brouwer mean motion of the orbit in <span class="math notranslate nohighlight">\(\frac{rev}{day}\)</span></p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The Kozai mean motion of the orbit in <span class="math notranslate nohighlight">\(\frac{rev}{day}\)</span></p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span>
+
+<span class="n">kozai_n</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">mean_motion</span><span class="o">.</span><span class="n">kozai</span><span class="o">.</span><span class="n">from_brouwer</span><span class="p">(</span><span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetMean">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetMean</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetMean" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the mean elements of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetMean.from_keplerian">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_keplerian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">kep</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetMean.from_keplerian" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from Keplerian elements to Mean elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>kep</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="keplerian_elements.html#pysaal.elements._keplerian_elements.KeplerianElements" title="pysaal.elements._keplerian_elements.KeplerianElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeplerianElements</span></code></a></span>) – The Keplerian elements to convert</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="mean_elements.html#pysaal.elements._mean_elements.MeanElements" title="pysaal.elements._mean_elements.MeanElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">MeanElements</span></code></a></span></p>
+</dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">KeplerianElements</span>
+
+<span class="n">kep</span> <span class="o">=</span> <span class="n">KeplerianElements</span><span class="p">(</span><span class="mi">42164</span><span class="p">,</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">0.42</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">mean</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">mean</span><span class="o">.</span><span class="n">from_keplerian</span><span class="p">(</span><span class="n">kep</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetMeanMotion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetMeanMotion</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetMeanMotion" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the mean motion of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetMeanMotion.brouwer">
+<span class="sig-name descname"><span class="pre">brouwer</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetMeanMotion.brouwer" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to Brouwer mean motion</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetBrouwer" title="pysaal.elements._convert_elements._GetBrouwer"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetBrouwer</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetMeanMotion.from_semi_major_axis">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_semi_major_axis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetMeanMotion.from_semi_major_axis" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from semi-major axis to mean motion</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>a</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span>) – The semi-major axis of the orbit in <span class="math notranslate nohighlight">\(km\)</span></p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The mean motion of the orbit in <span class="math notranslate nohighlight">\(\frac{rev}{day}\)</span></p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">mean_motion</span><span class="o">.</span><span class="n">from_semi_major_axis</span><span class="p">(</span><span class="mi">42164</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetMeanMotion.kozai">
+<span class="sig-name descname"><span class="pre">kozai</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetMeanMotion.kozai" title="Link to this definition">¶</a></dt>
+<dd><p>Converts to Kozai mean motion</p>
+<p>alias of <a class="reference internal" href="#pysaal.elements._convert_elements._GetKozai" title="pysaal.elements._convert_elements._GetKozai"><code class="xref py py-class docutils literal notranslate"><span class="pre">_GetKozai</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetTLE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_GetTLE</span></span><a class="headerlink" href="#pysaal.elements._convert_elements._GetTLE" title="Link to this definition">¶</a></dt>
+<dd><p>Class used to calculate the TLE of a satellite orbit</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This class is not intended to be used directly. Use the <a class="reference internal" href="#pysaal.elements._convert_elements.ConvertElements" title="pysaal.elements._convert_elements.ConvertElements"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConvertElements</span></code></a> class instead.</p>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._convert_elements._GetTLE.from_sp_vector">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_sp_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tle_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pysaal.elements._convert_elements._GetTLE.from_sp_vector" title="Link to this definition">¶</a></dt>
+<dd><p>Converts from a SPVector to a TLE</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sp</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="sp_vector.html#pysaal.elements._sp_vector.SPVector" title="pysaal.elements._sp_vector.SPVector"><code class="xref py py-class docutils literal notranslate"><span class="pre">SPVector</span></code></a></span>) – The SPVector to convert</p></li>
+<li><p><strong>tle_type</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLEType</span></code></span>) – The type of TLE to generate</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="tle.html#pysaal.elements._tle.TLE" title="pysaal.elements._tle.TLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLE</span></code></a></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The TLE of the satellite</p>
+</dd>
+<dt class="field-even">Example<span class="colon">:</span></dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pysaal.elements</span> <span class="kn">import</span> <span class="n">ConvertElements</span><span class="p">,</span> <span class="n">SPVector</span><span class="p">,</span> <span class="n">CartesianElements</span>
+<span class="kn">from</span> <span class="nn">pysaal.time</span> <span class="kn">import</span> <span class="n">Epoch</span>
+<span class="kn">from</span> <span class="nn">pysaal.enums</span> <span class="kn">import</span> <span class="n">TLEType</span>
+
+<span class="n">epoch</span> <span class="o">=</span> <span class="n">Epoch</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="n">teme_state</span> <span class="o">=</span> <span class="n">CartesianElements</span><span class="p">(</span>
+    <span class="o">-</span><span class="mf">42134.866555365596</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">1477.3611216130757</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">95.4631435846219</span><span class="p">,</span>
+    <span class="mf">0.10749110300482166</span><span class="p">,</span>
+    <span class="o">-</span><span class="mf">3.072941987275631</span><span class="p">,</span>
+    <span class="mf">0.021437245884576635</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">sat_id</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">sp</span> <span class="o">=</span> <span class="n">SPVector</span><span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">teme_state</span><span class="p">,</span> <span class="n">sat_id</span><span class="p">)</span>
+<span class="n">tle_type</span> <span class="o">=</span> <span class="n">TLEType</span><span class="o">.</span><span class="n">SGP4</span>
+<span class="n">tle</span> <span class="o">=</span> <span class="n">ConvertElements</span><span class="o">.</span><span class="n">tle</span><span class="o">.</span><span class="n">from_sp_vector</span><span class="p">(</span><span class="n">sp</span><span class="p">,</span> <span class="n">tle_type</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">PySAAL</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">PySAAL Modules</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../bodies/index.html">pysaal.bodies</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">pysaal.elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../enums/index.html">pysaal.enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../time/index.html">pysaal.time</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">SGP4 Open license</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../index.html">PySAAL Modules</a><ul>
+  <li><a href="index.html">pysaal.elements</a><ul>
+      <li>Previous: <a href="classical_elements.html" title="previous chapter">ClassicalElements</a></li>
+      <li>Next: <a href="equinoctial_elements.html" title="next chapter">EquinoctialElements</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Brandon Sexton.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.1.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="../../_sources/modules/elements/convert_elements.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
