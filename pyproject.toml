@@ -20,7 +20,16 @@ dev = [
 ]
 test = ["pytest", "pytest-cov", "mockito"]
 build = ["build"]
-docs = ["sphinx", "sphinx-autodoc-typehints", "sphinx-markdown-builder"]
+docs = [
+    "sphinx",
+    "sphinx-autodoc-typehints", 
+    "sphinx-markdown-builder",
+    "pydata-sphinx-theme",
+    "sphinx-prompt",
+    "sphinx-gallery",
+    "sphinx-copybutton",
+    "matplotlib",
+]
 deploy = ["twine"]
 
 [build-system]

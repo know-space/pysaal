@@ -11,4 +11,5 @@ PySAAL documentation
    :caption: Contents:
 
    modules/index
+   gallery/index
    license

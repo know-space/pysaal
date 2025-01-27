@@ -133,3 +133,11 @@ dmypy.json
 as_headers/
 
 certs/
+
+# Do not track the sphinx-gallery things
+docs/source/gallery
+docs/source/sg_execution_times.rst
+
+# Ignore the SGP$ open license file if it's not in the top-level directory
+SGP4_Open_License.txt
+!./SGP4_Open_License.txt
