@@ -1,0 +1,983 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>TLE &#8212; PySAAL 0.1.0 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery.css?v=d2d258e8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-binder.css?v=f4aeca0c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-dataframe.css?v=2082cf3c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sg_gallery-rendered-html.css?v=1277b6f3" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/documentation_options.js?v=01f34227"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules/elements/tle';</script>
+    <link rel="canonical" href="https://know-space.github.io/pysaal/modules/elements/tle.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="pysaal.enums" href="../enums/index.html" />
+    <link rel="prev" title="SPVector" href="sp_vector.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">PySAAL 0.1.0 documentation</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    PySAAL Modules
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../gallery/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../license.html">
+    SGP4 Open license
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    PySAAL Modules
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../gallery/index.html">
+    Examples
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../license.html">
+    SGP4 Open license
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../bodies/index.html">pysaal.bodies</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../bodies/earth.html">Earth</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../bodies/sun.html">Sun</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../bodies/moon.html">Moon</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">pysaal.elements</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="cartesian_elements.html">CartesianElements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="classical_elements.html">ClassicalElements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="convert_elements.html">ConvertElements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="equinoctial_elements.html">EquinoctialElements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="keplerian_elements.html">KeplerianElements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="lla.html">LLA</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="mean_elements.html">MeanElements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="propagated_tle.html">PropagatedTLE</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sp_vector.html">SPVector</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">TLE</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../enums/index.html">pysaal.enums</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../enums/earth_model.html">EarthModel</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../time/index.html">pysaal.time</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../time/epoch.html">Epoch</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../time/time_constants.html">TimeConstants</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../time/time_span.html">TimeSpan</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">PySAAL Modules</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="index.html" class="nav-link">pysaal.elements</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">TLE</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="tle">
+<h1>TLE<a class="headerlink" href="#tle" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<dl class="py class" id="module-pysaal.elements._tle">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">TLE</span></span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE" title="Link to this definition">#</a></dt>
+<dd><p>Class for Two-Line Element Sets (TLEs).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.MAX_DESIGNATOR_LENGTH">
+<span class="sig-name descname"><span class="pre">MAX_DESIGNATOR_LENGTH</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">8</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.MAX_DESIGNATOR_LENGTH" title="Link to this definition">#</a></dt>
+<dd><p>Designators longer than this will not fit entirely in the allocated space for a TLE.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.MAX_SATELLITE_ID">
+<span class="sig-name descname"><span class="pre">MAX_SATELLITE_ID</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">339999</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.MAX_SATELLITE_ID" title="Link to this definition">#</a></dt>
+<dd><p>Numbers above this value will not parse in accordance with the alpha-5 format.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.agom">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">agom</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.agom" title="Link to this definition">#</a></dt>
+<dd><p>Solar radiation pressure coefficient in <span class="math notranslate nohighlight">\(\frac{m^2}{kg}\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.altitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">altitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.altitude" title="Link to this definition">#</a></dt>
+<dd><p>Altitude of the satellite in <span class="math notranslate nohighlight">\(km\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.argument_of_perigee">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">argument_of_perigee</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.argument_of_perigee" title="Link to this definition">#</a></dt>
+<dd><p>Argument of perigee in <span class="math notranslate nohighlight">\(degrees\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.b_star">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">b_star</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.b_star" title="Link to this definition">#</a></dt>
+<dd><p>B* drag term in <span class="math notranslate nohighlight">\(\frac{1}{er}\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.ballistic_coefficient">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ballistic_coefficient</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.ballistic_coefficient" title="Link to this definition">#</a></dt>
+<dd><p>Ballistic coefficient in <span class="math notranslate nohighlight">\(\frac{m^2}{kg}\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.cartesian_elements">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cartesian_elements</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="cartesian_elements.html#pysaal.elements._cartesian_elements.CartesianElements" title="pysaal.elements._cartesian_elements.CartesianElements"><span class="pre">CartesianElements</span></a></em><a class="headerlink" href="#pysaal.elements._tle.TLE.cartesian_elements" title="Link to this definition">#</a></dt>
+<dd><p>TEME position and velocity elements in <span class="math notranslate nohighlight">\(km\)</span> and <span class="math notranslate nohighlight">\(\frac{km}{s}\)</span>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.classification">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">classification</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Classification</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.classification" title="Link to this definition">#</a></dt>
+<dd><p>Classification of the satellite</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.designator">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">designator</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.designator" title="Link to this definition">#</a></dt>
+<dd><p>8-character designator of the satellite</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.destroy">
+<span class="sig-name descname"><span class="pre">destroy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.destroy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.destroy" title="Link to this definition">#</a></dt>
+<dd><p>Remove the TLE from memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.destroy_all">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destroy_all</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.destroy_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.destroy_all" title="Link to this definition">#</a></dt>
+<dd><p>Remove all TLEs from memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.eccentricity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eccentricity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.eccentricity" title="Link to this definition">#</a></dt>
+<dd><p>Eccentricity (unitless)</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.element_set_number">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">element_set_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.element_set_number" title="Link to this definition">#</a></dt>
+<dd><p>Element set number</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.ephemeris_type">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ephemeris_type</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">TLEType</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.ephemeris_type" title="Link to this definition">#</a></dt>
+<dd><p>Ephemeris type of the TLE</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.epoch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">epoch</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="../time/epoch.html#pysaal.time._epoch.Epoch" title="pysaal.time._epoch.Epoch"><span class="pre">Epoch</span></a></em><a class="headerlink" href="#pysaal.elements._tle.TLE.epoch" title="Link to this definition">#</a></dt>
+<dd><p>Epoch of the TLE</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.from_c_arrays">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_c_arrays</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">c_double_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_char_array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.from_c_arrays"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.from_c_arrays" title="Link to this definition">#</a></dt>
+<dd><p>Instantiate a TLE from c arrays that correspond to the required arguments for the SAAL functions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>c_double_array</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">c_double</span></code>]</span>) – The c_double array containing the TLE numeric fields</p></li>
+<li><p><strong>c_char_array</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">c_char</span></code>]</span>) – The c_char array containing the TLE string fields</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pysaal.elements._tle.TLE" title="pysaal.elements._tle.TLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLE</span></code></a></span></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is primarily for internal use.</p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.from_key">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.from_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.from_key" title="Link to this definition">#</a></dt>
+<dd><p>Instantiate a TLE from a known key in memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">c_long</span></code></span>) – The key associated with the TLE in memory</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pysaal.elements._tle.TLE" title="pysaal.elements._tle.TLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLE</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.from_lines">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_lines</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.from_lines"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.from_lines" title="Link to this definition">#</a></dt>
+<dd><p>Create a TLE object from two TLE lines.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line_1</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The first line of the TLE.</p></li>
+<li><p><strong>line_2</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></span>) – The second line of the TLE.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pysaal.elements._tle.TLE" title="pysaal.elements._tle.TLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLE</span></code></a></span></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the preferred method for creating a TLE object.</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Example<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pysaal.elements</span><span class="w"> </span><span class="kn">import</span> <span class="n">TLE</span>
+
+<span class="n">line_1</span> <span class="o">=</span> <span class="s2">&quot;1 25544U 98067A   24340.99323416 +.00018216  00000 0  32316-3 0 0999&quot;</span>
+<span class="n">line_2</span> <span class="o">=</span> <span class="s2">&quot;2 25544  51.6388 184.2057 0007028 306.7642 201.1123 15.5026597648519&quot;</span>
+
+<span class="n">tle</span> <span class="o">=</span> <span class="n">TLE</span><span class="o">.</span><span class="n">from_lines</span><span class="p">(</span><span class="n">line_1</span><span class="p">,</span> <span class="n">line_2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">tle</span><span class="o">.</span><span class="n">satellite_id</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.get_loaded_keys">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_loaded_keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.get_loaded_keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.get_loaded_keys" title="Link to this definition">#</a></dt>
+<dd><p>Get the keys of all TLEs in memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">c_long</span></code>]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.get_null_pointers">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_null_pointers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.get_null_pointers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.get_null_pointers" title="Link to this definition">#</a></dt>
+<dd><p>Get null pointers for the c_double and c_char arrays used in the SAAL functions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">c_double</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">c_char</span></code>]]</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.get_number_in_memory">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_number_in_memory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.get_number_in_memory"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.get_number_in_memory" title="Link to this definition">#</a></dt>
+<dd><p>Get the number of TLEs in memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.get_range_at_epoch">
+<span class="sig-name descname"><span class="pre">get_range_at_epoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.get_range_at_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.get_range_at_epoch" title="Link to this definition">#</a></dt>
+<dd><p>Get the range between two satellites at a given epoch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>epoch</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../time/epoch.html#pysaal.time._epoch.Epoch" title="pysaal.time._epoch.Epoch"><code class="xref py py-class docutils literal notranslate"><span class="pre">Epoch</span></code></a></span>) – The epoch at which to calculate the range</p></li>
+<li><p><strong>other</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="#pysaal.elements._tle.TLE" title="pysaal.elements._tle.TLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">TLE</span></code></a></span>) – The other TLE to compare</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></span></p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The range between the two satellites in <span class="math notranslate nohighlight">\(km\)</span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.get_state_at_epoch">
+<span class="sig-name descname"><span class="pre">get_state_at_epoch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epoch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.get_state_at_epoch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.get_state_at_epoch" title="Link to this definition">#</a></dt>
+<dd><p>Get the full orbit state at a given epoch</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>epoch</strong> (<span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="../time/epoch.html#pysaal.time._epoch.Epoch" title="pysaal.time._epoch.Epoch"><code class="xref py py-class docutils literal notranslate"><span class="pre">Epoch</span></code></a></span>) – The epoch at which to calculate the state</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>PySAALError</strong> – If there is an error during propagation or the subsequent call to calculate the orbit
+state</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><a class="reference internal" href="propagated_tle.html#pysaal.elements._propagated_tle.PropagatedTLE" title="pysaal.elements._propagated_tle.PropagatedTLE"><code class="xref py py-class docutils literal notranslate"><span class="pre">PropagatedTLE</span></code></a></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.inclination">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">inclination</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.inclination" title="Link to this definition">#</a></dt>
+<dd><p>Inclination in <span class="math notranslate nohighlight">\(degrees\)</span></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.key">
+<span class="sig-name descname"><span class="pre">key</span></span><a class="headerlink" href="#pysaal.elements._tle.TLE.key" title="Link to this definition">#</a></dt>
+<dd><p>The key used to reference the TLE in memory</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.latitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">latitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.latitude" title="Link to this definition">#</a></dt>
+<dd><p>Latitude of the satellite in <span class="math notranslate nohighlight">\(degrees\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.line_1">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">line_1</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.line_1" title="Link to this definition">#</a></dt>
+<dd><p>The first line of the TLE</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.line_2">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">line_2</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.line_2" title="Link to this definition">#</a></dt>
+<dd><p>The second line of the TLE</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.lines">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lines</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.lines" title="Link to this definition">#</a></dt>
+<dd><p>The two lines of the TLE</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.lla">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lla</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="lla.html#pysaal.elements._lla.LLA" title="pysaal.elements._lla.LLA"><span class="pre">LLA</span></a></em><a class="headerlink" href="#pysaal.elements._tle.TLE.lla" title="Link to this definition">#</a></dt>
+<dd><p>Latitude, longitude, and altitude of the satellite</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.load"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.load" title="Link to this definition">#</a></dt>
+<dd><p>Load the TLE into memory</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.loaded">
+<span class="sig-name descname"><span class="pre">loaded</span></span><a class="headerlink" href="#pysaal.elements._tle.TLE.loaded" title="Link to this definition">#</a></dt>
+<dd><p>Flag indicating if the TLE is loaded into memory</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.longitude">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">longitude</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.longitude" title="Link to this definition">#</a></dt>
+<dd><p>Longitude of the satellite in <span class="math notranslate nohighlight">\(degrees\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.mean_anomaly">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean_anomaly</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.mean_anomaly" title="Link to this definition">#</a></dt>
+<dd><p>Mean anomaly in <span class="math notranslate nohighlight">\(degrees\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.mean_motion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mean_motion</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.mean_motion" title="Link to this definition">#</a></dt>
+<dd><p>Mean motion in <span class="math notranslate nohighlight">\(\frac{rev}{day}\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.n_dot">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_dot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.n_dot" title="Link to this definition">#</a></dt>
+<dd><p>Mean motion derivative in <span class="math notranslate nohighlight">\(\frac{rev}{2*day}\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.n_dot_dot">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">n_dot_dot</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.n_dot_dot" title="Link to this definition">#</a></dt>
+<dd><p>Mean motion second derivative in <span class="math notranslate nohighlight">\(\frac{rev}{6*day^2}\)</span></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pysaal.elements._tle.TLE.name" title="Link to this definition">#</a></dt>
+<dd><p>The name associated with the TLE</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.outgassing_parameter">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">outgassing_parameter</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.outgassing_parameter" title="Link to this definition">#</a></dt>
+<dd><p>Outgassing parameter in <span class="math notranslate nohighlight">\(\frac{km}{s^2}\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.position">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">position</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Vector3D</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.position" title="Link to this definition">#</a></dt>
+<dd><p>Position of the satellite in <span class="math notranslate nohighlight">\(km\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.raan">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">raan</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.raan" title="Link to this definition">#</a></dt>
+<dd><p>Right ascension of the ascending node in <span class="math notranslate nohighlight">\(degrees\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.revolution_number">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">revolution_number</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.revolution_number" title="Link to this definition">#</a></dt>
+<dd><p>Revolution number</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.satellite_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">satellite_id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.satellite_id" title="Link to this definition">#</a></dt>
+<dd><p>The alpha-5 compatible satellite ID</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.state">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="propagated_tle.html#pysaal.elements._propagated_tle.PropagatedTLE" title="pysaal.elements._propagated_tle.PropagatedTLE"><span class="pre">PropagatedTLE</span></a></em><a class="headerlink" href="#pysaal.elements._tle.TLE.state" title="Link to this definition">#</a></dt>
+<dd><p>Full orbit state at the current epoch.  See <a class="reference internal" href="propagated_tle.html#propagated-tle"><span class="std std-ref">PropagatedTLE</span></a> for details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.update" title="Link to this definition">#</a></dt>
+<dd><p>Updates the TLE in memory
+:rtype: <span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This method is called when properties with affect the propagation of the TLE have changed.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.velocity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">velocity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Vector3D</span></em><a class="headerlink" href="#pysaal.elements._tle.TLE.velocity" title="Link to this definition">#</a></dt>
+<dd><p>Velocity of the satellite in <span class="math notranslate nohighlight">\(\frac{km}{s}\)</span></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pysaal.elements._tle.TLE.write_loaded_tles_to_file">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">write_loaded_tles_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/pysaal/elements/_tle.html#TLE.write_loaded_tles_to_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pysaal.elements._tle.TLE.write_loaded_tles_to_file" title="Link to this definition">#</a></dt>
+<dd><p>Write all files in memory to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<span class="sphinx_autodoc_typehints-type"><code class="xref py py-class docutils literal notranslate"><span class="pre">Path</span></code></span>) – The path to the file to write.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="sphinx_autodoc_typehints-type"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></span></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="sp_vector.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">SPVector</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../enums/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pysaal.enums</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE"><code class="docutils literal notranslate"><span class="pre">TLE</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.MAX_DESIGNATOR_LENGTH"><code class="docutils literal notranslate"><span class="pre">TLE.MAX_DESIGNATOR_LENGTH</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.MAX_SATELLITE_ID"><code class="docutils literal notranslate"><span class="pre">TLE.MAX_SATELLITE_ID</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.agom"><code class="docutils literal notranslate"><span class="pre">TLE.agom</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.altitude"><code class="docutils literal notranslate"><span class="pre">TLE.altitude</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.argument_of_perigee"><code class="docutils literal notranslate"><span class="pre">TLE.argument_of_perigee</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.b_star"><code class="docutils literal notranslate"><span class="pre">TLE.b_star</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.ballistic_coefficient"><code class="docutils literal notranslate"><span class="pre">TLE.ballistic_coefficient</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.cartesian_elements"><code class="docutils literal notranslate"><span class="pre">TLE.cartesian_elements</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.classification"><code class="docutils literal notranslate"><span class="pre">TLE.classification</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.designator"><code class="docutils literal notranslate"><span class="pre">TLE.designator</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.destroy"><code class="docutils literal notranslate"><span class="pre">TLE.destroy()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.destroy_all"><code class="docutils literal notranslate"><span class="pre">TLE.destroy_all()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.eccentricity"><code class="docutils literal notranslate"><span class="pre">TLE.eccentricity</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.element_set_number"><code class="docutils literal notranslate"><span class="pre">TLE.element_set_number</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.ephemeris_type"><code class="docutils literal notranslate"><span class="pre">TLE.ephemeris_type</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.epoch"><code class="docutils literal notranslate"><span class="pre">TLE.epoch</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.from_c_arrays"><code class="docutils literal notranslate"><span class="pre">TLE.from_c_arrays()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.from_key"><code class="docutils literal notranslate"><span class="pre">TLE.from_key()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.from_lines"><code class="docutils literal notranslate"><span class="pre">TLE.from_lines()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.get_loaded_keys"><code class="docutils literal notranslate"><span class="pre">TLE.get_loaded_keys()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.get_null_pointers"><code class="docutils literal notranslate"><span class="pre">TLE.get_null_pointers()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.get_number_in_memory"><code class="docutils literal notranslate"><span class="pre">TLE.get_number_in_memory()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.get_range_at_epoch"><code class="docutils literal notranslate"><span class="pre">TLE.get_range_at_epoch()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.get_state_at_epoch"><code class="docutils literal notranslate"><span class="pre">TLE.get_state_at_epoch()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.inclination"><code class="docutils literal notranslate"><span class="pre">TLE.inclination</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.key"><code class="docutils literal notranslate"><span class="pre">TLE.key</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.latitude"><code class="docutils literal notranslate"><span class="pre">TLE.latitude</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.line_1"><code class="docutils literal notranslate"><span class="pre">TLE.line_1</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.line_2"><code class="docutils literal notranslate"><span class="pre">TLE.line_2</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.lines"><code class="docutils literal notranslate"><span class="pre">TLE.lines</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.lla"><code class="docutils literal notranslate"><span class="pre">TLE.lla</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.load"><code class="docutils literal notranslate"><span class="pre">TLE.load()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.loaded"><code class="docutils literal notranslate"><span class="pre">TLE.loaded</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.longitude"><code class="docutils literal notranslate"><span class="pre">TLE.longitude</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.mean_anomaly"><code class="docutils literal notranslate"><span class="pre">TLE.mean_anomaly</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.mean_motion"><code class="docutils literal notranslate"><span class="pre">TLE.mean_motion</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.n_dot"><code class="docutils literal notranslate"><span class="pre">TLE.n_dot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.n_dot_dot"><code class="docutils literal notranslate"><span class="pre">TLE.n_dot_dot</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.name"><code class="docutils literal notranslate"><span class="pre">TLE.name</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.outgassing_parameter"><code class="docutils literal notranslate"><span class="pre">TLE.outgassing_parameter</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.position"><code class="docutils literal notranslate"><span class="pre">TLE.position</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.raan"><code class="docutils literal notranslate"><span class="pre">TLE.raan</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.revolution_number"><code class="docutils literal notranslate"><span class="pre">TLE.revolution_number</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.satellite_id"><code class="docutils literal notranslate"><span class="pre">TLE.satellite_id</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.state"><code class="docutils literal notranslate"><span class="pre">TLE.state</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.update"><code class="docutils literal notranslate"><span class="pre">TLE.update()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.velocity"><code class="docutils literal notranslate"><span class="pre">TLE.velocity</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pysaal.elements._tle.TLE.write_loaded_tles_to_file"><code class="docutils literal notranslate"><span class="pre">TLE.write_loaded_tles_to_file()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2024-2025, KnowSpace.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
