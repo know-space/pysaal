@@ -1,6 +1,6 @@
 [project]
 name = "pysaal"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python helper package for the standardized astrodynamics library from space-track"
 readme = "README.md"
 requires-python = ">=3.9"
@@ -21,14 +21,14 @@ dev = [
 test = ["pytest", "pytest-cov", "mockito"]
 build = ["build"]
 docs = [
-    "sphinx",
-    "sphinx-autodoc-typehints", 
-    "sphinx-markdown-builder",
-    "pydata-sphinx-theme",
-    "sphinx-prompt",
-    "sphinx-gallery",
-    "sphinx-copybutton",
-    "matplotlib",
+  "sphinx",
+  "sphinx-autodoc-typehints",
+  "sphinx-markdown-builder",
+  "pydata-sphinx-theme",
+  "sphinx-prompt",
+  "sphinx-gallery",
+  "sphinx-copybutton",
+  "matplotlib",
 ]
 deploy = ["twine"]
 
